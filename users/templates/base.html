@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Space Dynamic - SEO HTML5 Template</title>
+    <title>{% block title %} {% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,17 +59,17 @@ https://templatemo.com/tm-562-space-dynamic
                 <p>Romans 15:13 May the God of hope fill you with all joy and peace as you trust in him,so that you may overflow with hope by the power of the Holy spirit.</p>
                 <form id="search" action="#" method="GET">
                   <fieldset>
-                    <input type="address" name="address" class="email" placeholder="Your website URL..." autocomplete="on" required>
+                    <input type="address" name="address" class="email" placeholder="Get Started" value="Get Started" autocomplete="on" required>
                   </fieldset>
                   <fieldset>
-                    <button type="submit" class="main-button">Analyze Site</button>
+                    <button type="submit" class="main-button"><a href="">Register</a></button>
                   </fieldset>
                 </form>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="/static/assets/images/banner-right-image.png" alt="team meeting">
+                <img src="/static/assets/images/church.jpg" style="border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;" alt="team meeting">
               </div>
             </div>
           </div>
@@ -95,8 +95,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-01.png" alt="reporting">
                   </div>
                   <div class="right-text">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Sunday</h4>
+                    <p>Sunday School teachings<span>7-9A.M</span></p>
                   </div>
                 </div>
               </div>
@@ -107,8 +107,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-01.png" alt="reporting">
                   </div>
                   <div class="right-text">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Sunday</h4>
+                    <p>Sunday Service from <span>10A.M-1P.M</span></p>
                   </div>
                 </div>
               </div>
@@ -119,8 +119,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-01.png" alt="reporting">
                   </div>
                   <div class="right-text">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Tuesday</h4>
+                    <p>House Fellowship from <span>  4-6P.M</span></p>
                   </div>
                 </div>
               </div>
@@ -131,8 +131,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-02.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>Data Reporting</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>Wednesday</h4>
+                    <p>Church prayers from <span>5-6P.M</span></p>
                   </div>
                   
                 </div>
@@ -143,8 +143,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-03.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>Web Analytics</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Thursday</h4>
+                    <p>church prayers from<span>5-6P.M</span></p>
                   </div>
                 </div>
               </div>
@@ -154,8 +154,9 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-04.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>SEO Suggestions</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Saturday</h4>
+                    <p>Sunday School Dance Practice <span>2-4P.M</span></p>
+                    <P>Choir &amp; Praise and worship practice<span>4-6:30P.M</span></P>
                   </div>
                 </div>
               </div>
@@ -166,6 +167,7 @@ https://templatemo.com/tm-562-space-dynamic
     </div>
   </div>
 
+   <!-- 
   <div id="services" class="our-services section">
     <div class="container">
       <div class="row">
@@ -209,16 +211,17 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
     </div>
   </div>
+  -->
 
   <div id="portfolio" class="our-portfolio section">
     <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
             <h2>See What Our Agency <em>Offers</em> &amp; What We <span>Provide</span></h2>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-lg-3 col-sm-6">
           <a href="#">
