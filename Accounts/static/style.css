@@ -16,7 +16,7 @@ body {
 }
 .wrapper {
   position: relative;
-  max-width: 400px;
+  max-width: 350px;
   width: 100%;
   border-radius: 12px;
   padding: 20px
@@ -156,4 +156,7 @@ form
   background: #4070f4;
   color: #fff;
   border: none;
+}
+a{
+    text-decoration: none;
 }
