@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Space Dynamic - SEO HTML5 Template</title>
+    <title>{% block title %} {% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,17 +59,17 @@ https://templatemo.com/tm-562-space-dynamic
                 <p>Romans 15:13 May the God of hope fill you with all joy and peace as you trust in him,so that you may overflow with hope by the power of the Holy spirit.</p>
                 <form id="search" action="#" method="GET">
                   <fieldset>
-                    <input type="address" name="address" class="email" placeholder="Your website URL..." autocomplete="on" required>
+                    <input type="address" name="address" class="email" placeholder="Get Started" value="Get Started" autocomplete="on" required>
                   </fieldset>
                   <fieldset>
-                    <button type="submit" class="main-button">Analyze Site</button>
+                    <button type="submit" class="main-button"><a href="{% url 'Register' %}">Register</a></button>
                   </fieldset>
                 </form>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="/static/assets/images/banner-right-image.png" alt="team meeting">
+                <img src="/static/assets/images/church.jpg" style="border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;" alt="team meeting">
               </div>
             </div>
           </div>
@@ -95,8 +95,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-01.png" alt="reporting">
                   </div>
                   <div class="right-text">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Sunday</h4>
+                    <p>Sunday School teachings<span>7-9A.M</span></p>
                   </div>
                 </div>
               </div>
@@ -107,8 +107,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-01.png" alt="reporting">
                   </div>
                   <div class="right-text">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Sunday</h4>
+                    <p>Sunday Service from <span>10A.M-1P.M</span></p>
                   </div>
                 </div>
               </div>
@@ -119,8 +119,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-01.png" alt="reporting">
                   </div>
                   <div class="right-text">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Tuesday</h4>
+                    <p>House Fellowship from <span>  4-6P.M</span></p>
                   </div>
                 </div>
               </div>
@@ -131,8 +131,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-02.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>Data Reporting</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>Wednesday</h4>
+                    <p>Church prayers from <span>5-6P.M</span></p>
                   </div>
                   
                 </div>
@@ -143,8 +143,8 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-03.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>Web Analytics</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Thursday</h4>
+                    <p>church prayers from<span>5-6P.M</span></p>
                   </div>
                 </div>
               </div>
@@ -154,8 +154,9 @@ https://templatemo.com/tm-562-space-dynamic
                     <img src="/static/assets/images/service-icon-04.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>SEO Suggestions</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                    <h4>On Saturday</h4>
+                    <p>Sunday School Dance Practice <span>2-4P.M</span></p>
+                    <P>Choir &amp; Praise and worship practice<span>4-6:30P.M</span></P>
                   </div>
                 </div>
               </div>
@@ -166,6 +167,7 @@ https://templatemo.com/tm-562-space-dynamic
     </div>
   </div>
 
+   <!-- 
   <div id="services" class="our-services section">
     <div class="container">
       <div class="row">
@@ -209,13 +211,14 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
     </div>
   </div>
+  -->
 
   <div id="portfolio" class="our-portfolio section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2>See What Our Agency <em>Offers</em> &amp; What We <span>Provide</span></h2>
+            <h2>Explore Our Church<em>Trends</em> &amp;<span>News</span></h2>
           </div>
         </div>
       </div>
@@ -224,11 +227,12 @@ https://templatemo.com/tm-562-space-dynamic
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="hidden-content">
-                <h4>SEO Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>Inspiration Sermon</h4>
+                <p>Join us for a spiritually uplifting sermon and soulful worship experience...</p>
               </div>
               <div class="showed-content">
-                <img src="/static/assets/images/portfolio-image.png" alt="">
+                <p><strong>Inspiration Sermon...</strong></p>
+                <img src="/static/assets/images/sermon.jpg" height="90px" width="90px" style="border-radius: 50%;" alt="">
               </div>
             </div>
           </a>
@@ -237,11 +241,12 @@ https://templatemo.com/tm-562-space-dynamic
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
               <div class="hidden-content">
-                <h4>Website Reporting</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>Youth Fellowship &amp; Community Service</h4>
+                <p>Engage in our youth fellowship and contribute to community service activities...</p>
               </div>
               <div class="showed-content">
-                <img src="/static/assets/images/portfolio-image.png" alt="">
+                <p><strong>Youth Fellowship...</strong></p>
+                <img src="/static/assets/images/youth.jpg" height="90px" width="90px" style="border-radius: 50%;"alt="">
               </div>
             </div>
           </a>
@@ -250,11 +255,12 @@ https://templatemo.com/tm-562-space-dynamic
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
               <div class="hidden-content">
-                <h4>Performance Tests</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>Church Outreach &amp; Charity Programs</h4>
+                <p>Get involved in our outreach and charity programs to make a positive impact...</p>
               </div>
               <div class="showed-content">
-                <img src="/static/assets/images/portfolio-image.png" alt="">
+                <p><strong>Church Outreach...</strong></p>
+                <img src="/static/assets/images/outreach.jpg" height="90px" width="90px" style="border-radius: 50%;" alt="">
               </div>
             </div>
           </a>
@@ -263,11 +269,12 @@ https://templatemo.com/tm-562-space-dynamic
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
               <div class="hidden-content">
-                <h4>Data Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>Spiritual Growth Workshops</h4>
+                <p>Participate in workshops for spiritual growth and personal development...</p>
               </div>
               <div class="showed-content">
-                <img src="/static/assets/images/portfolio-image.png" alt="">
+                <p><strong>Spiritual Growth &amp;...</strong></p>
+                <img src="/static/assets/images/growth.jpg" height="90px" width="90px" style="border-radius: 50%;" alt="">
               </div>
             </div>
           </a>
@@ -276,6 +283,7 @@ https://templatemo.com/tm-562-space-dynamic
     </div>
   </div>
 
+  <!--  
   <div id="blog" class="our-blog section">
     <div class="container">
       <div class="row">
@@ -349,14 +357,15 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
     </div>
   </div>
+  -->
 
   <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <div class="section-heading">
-            <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore et dolores</p>
+            <h2>Feel Free To Share your Enquiries or a Message with the man of God</h2>
+            <p>Isaiah 41:10 I don't know what tomorrow holds but I completely trust in he who holds tomorrow</p>
             <div class="phone-info">
               <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
             </div>
