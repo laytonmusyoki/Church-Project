@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
-    'Accounts'
+    'Accounts',
+    'section'
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'church.wsgi.application'
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='laytonmatheka7@gmail.com'
+EMAIL_HOST_PASSWORD='qamfnggyldkpbhje'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+RECIPIENT_EMAIL = 'laytonmatheka7@gmail.com'
+
+ALLOWED_HOSTS = []
 
 
 # Database
@@ -121,6 +132,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STSTICFILES_DIRS=[
     Path(BASE_DIR,'static')
+]
+pdf_file_path =[
+    Path(BASE_DIR, 'pdfs/try.pdf')
 ]
 
 # Default primary key field type

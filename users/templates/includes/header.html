@@ -5,7 +5,8 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="{% url 'index' %}" class="logo" style="display: flex; align-items: center; justify-content: space-between;">
+              <img src="/static/assets/images/cross.jpg" height="50px" width="50px" style="border-radius: 50%;" alt="">
               <h4>Eagle<span>Rise</span></h4>
             </a>
             <!-- ***** Logo End ***** -->
@@ -17,6 +18,12 @@
               <li class="scroll-to-section"><a href="#portfolio">Trends</a></li>
               <!-- <li class="scroll-to-section"><a href="#blog">Blog</a></li>  -->
               <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
+              {% if request.user.is_authenticated %}
+              <li class="scroll-to-section"><a href="{% url 'signout' %}">Logout</a></li> 
+              {% else %}
+              <li class="scroll-to-section"><a href="{% url 'signin' %}">Login</a></li>
+              <li class="scroll-to-section"><a href="{% url 'Register' %}">Register</a></li>
+              {% endif %}
               <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
@@ -26,6 +33,14 @@
           </nav>
         </div>
       </div>
+    </div>
+    <div class="container">
+      {% for msg in messages %}
+        <div class="alert alert-{{msg.level_tag}} alert-dismissible fade show  name" role="alert" style="margin-top: 20px;">
+        <strong> {{msg.message}}</strong>
+        <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+        </div>
+        {% endfor %}
     </div>
   </header>
   <!-- ***** Header Area End ***** -->

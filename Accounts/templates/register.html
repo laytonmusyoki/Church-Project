@@ -5,19 +5,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Login & Signup Form</title>
+   <title>EagleRise | Signup</title>
+   <link rel="icon" href="/static/assets/images/cross.jpg">
+   <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css" />
   </head>
   <body>
     <section class="wrapper">
       <div class="form signup">
         <header>Signup</header>
-        <form action="#">
-          <input type="text" placeholder="Full name" required />
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
+        {% if forms.errors %}
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                        {% for key, error in forms.errors.items %}
+                                                        <strong>{{ error }}</strong>
+                                            {% endfor %}
+                        <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+
+                {% endif %}
+        <form action="" method="POST">
+          {% csrf_token %}
+          {% for form in forms %}
+          {{form}}
+          {% endfor %}
           <div class="checkbox">
-            <input type="checkbox" id="signupCheck" />
+            <input type="checkbox" id="signupCheck" required />
             <label for="signupCheck">I accept all terms & conditions</label>
           </div>
           <input type="submit" value="Signup" />
@@ -34,6 +46,7 @@
         loginHeader.classList.add("active");
           
       </script>
+      <script src="/static/bootstrap/js/bootstrap.js"></script>
     </section>
   </body>
 </html>
